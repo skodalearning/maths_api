@@ -111,7 +111,7 @@ output application/json
             </ee:message>
         </ee:transform>
     </flow>
-    <flow name="post:\add:application\json:mathsapi-config">
+	<flow name="post:\add:application\json:mathsapi-config">
         <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
@@ -122,5 +122,6 @@ output application/json
 }]]></ee:set-payload>
             </ee:message>
         </ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="83914fc0-1d98-4540-bb30-d00a7f4a0f37" message="the value is  #[payload]"/>
     </flow>
 </mule>
