@@ -1,0 +1,39 @@
+#%RAML 1.0
+title: mathsAPI
+description: this API is meant for maths calculations
+baseUri: http://localhost:8081/v1/maths
+
+/square:
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  "result" : 300
+                }
+              
+/add:
+  post:
+    body:
+      application/json:
+        properties:
+          a:
+            type: number
+          b:
+            type: number
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "result" : 1000
+              }
+      
+
+    
+    
+    
